@@ -1,2 +1,3 @@
 .pytest_cache
 .vscode
+scraping_complete.py

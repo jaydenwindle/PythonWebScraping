@@ -15,4 +15,5 @@ beautifulsoup4 = "*"
 python_version = "3.7"
 
 [scripts]
-test = "ptw -- -xs"
+test = "pytest -s"
+watch = "ptw -- -xs"
