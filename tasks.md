@@ -1,6 +1,6 @@
 # Intro to Web Scraping with Python
 
-## Section #1: Let's get scraping!
+## Let's get scraping!
 
 ### Task #1: Import the `requests` library
 
@@ -18,7 +18,7 @@ Fetch the HTML source code for Pluralsight homepage by calling the `requests.get
 
 If you want to see the source code of the Pluralsight homepage, try printing it to the console with `print(response.text)`
 
-## Section #2: Parsing the HTML
+## Parsing the HTML
 
 ### Task #4: Import BeautifulSoup
 
@@ -58,14 +58,17 @@ Now let's grab the trending topic's URL. Inside your `for` loop from the last st
 
 You can access the trending topic's URL as a string by grabbing the `href` attribute from `topic_url_element`. Store the attribute `topic_url_element["href"]` in a variable called `topic_url`. If you want to see whether you've grabbed the URL properly, try printing it with `print(topic_url)`.
 
-### Task #9: Formatting our data
+### Task #9: Formatting the data
 
 Now that we've got the `name` and `url` for each trending topic, we want to store the details of each trending topic in an array. We'll use a dictionary with the keys `name` and `url` to represent each trending topic.
 
 Inside your `for` loop from the previous two steps, create a dictionary called `topic` where the `name` key is set to the value of your `name` variable and the `url` key is set to the value of your `topic_url` variable. Append the dictionary to the `trending_topics` array by calling `trending_topics.append(topic)`.
 
 If you print your `trending_topics` array, you should see all of the topics from the Pluralsight homepage and their corresponding URLs.
-### Task #10: Exporting our data
+
+## Exporting the Data
+
+### Task #10: Writing to a file
 
 Now that you've formatted the data properly, let's export it to a file so the data can be used later on.
 
