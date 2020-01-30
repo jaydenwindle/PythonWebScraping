@@ -17,8 +17,6 @@ You'll need to have access to the following tools on your local machine to compl
 * Python 3 (see: https://realpython.com/installing-python/)
 * Pipenv (see: https://pipenv-fork.readthedocs.io/en/latest/install.html#installing-pipenv)
 
-Never used Git and don’t have a code editor? We have a video that walks you through all the steps you’ll need to set this up.
-
 ## Prerequisite Knowledge
 
 Completing all of the tasks in this project requires knowledge of basic Python concepts.
@@ -61,7 +59,7 @@ You can test that everything has been set up correctly by running the following 
 $ pipenv run test
 ```
 
-We recommend also running the following command, which will watch for any changes to your files and then re-run the tests automatically. This makes things easier, since you'll see updates immediately when you save your files! You can run this command once, and then look back at the terminal after you've made changes to the `scraping.py` file.
+As you're working through the project, it's highly recommended to run the following command, which will watch for any changes to your files and then re-run the tests automatically whenever you save your files. You can run this command once, and then look back at the terminal after you've made changes to the `scraping.py` file.
 
 ```
 $ pipenv run watch
