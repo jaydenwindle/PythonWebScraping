@@ -2,7 +2,7 @@
 
 ## Description
 
-This project will teach you the basics of web scraping with Python. You'll learn step by step how to scrape the list of "Trending Topics" from the PluralSight homepage, and exporting it as a JSON file.
+This project will teach you the basics of web scraping with Python. You'll learn step by step how to use standard Python web scraping tools to scrape the list of "Trending Topics" from the PluralSight homepage and export them as a JSON file.
 
 ## Required Applications and Tools
 
@@ -69,7 +69,7 @@ $ pipenv run watch
 
 ### Import the `requests` library
 
-We're going to use the [`requests`](https://requests.readthedocs.io/en/master/) Python library to make requests to the Pluralsight homepage (`https://www.pluralsight.com/`) and download the HTML source code.
+You're going to use the [`requests`](https://requests.readthedocs.io/en/master/) Python library to make requests to the Pluralsight homepage (`https://www.pluralsight.com/`) and download the HTML source code.
 
 To start, `import requests` at the top of your `scraping.py` file.
 
@@ -132,7 +132,7 @@ Inside your `for` loop from the previous two steps, create a dictionary called `
 If you print your `trending_topics` array, you should see all of the topics from the Pluralsight homepage and their corresponding URLs.
 ### Exporting our data
 
-Congrats! You've successfully scraped data from a website using Python. Now let's export it to a file so the data can be used later on.
+Now that you've formatted the data properly, let's export it to a file so the data can be used later on.
 
 To start, `import json` at the top of your `scraping.py` file.
 
@@ -145,3 +145,7 @@ with open('trending_topics.json', 'w') as json_file:
 Inside of your `with` block, call the `json.dump` method, passing in your `trending_topics` array as the first argument and `json_file` as the second argument. This will write your `trending_topics` array to the `trending_topics.json` in JSON format.
 
 ## Next Steps
+
+Congrats! You've successfully scraped data from a website, formatted it, and stored it in a file. You've learned how to send requests with the `requests` library, how to parse and traverse HTML documents using `BeautifulSoup`, and how to export data to a file in JSON format.
+
+If you want an extra challenge, try scraping some other elements from the Pluralsight homepage (e.g. the "Discover more ways to stay ahead" section).
