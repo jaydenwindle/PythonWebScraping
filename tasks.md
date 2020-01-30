@@ -59,7 +59,7 @@ You can test that everything has been set up correctly by running the following 
 $ pipenv run test
 ```
 
-We recommend also running the following command, which will watch for any changes to your files and then re-run the tests automatically. This makes things easier, since you'll see updates immediately when you save your files! You can run this command once, and then look back at the terminal after you've made changes to the "scraping.py" file.
+We recommend also running the following command, which will watch for any changes to your files and then re-run the tests automatically. This makes things easier, since you'll see updates immediately when you save your files! You can run this command once, and then look back at the terminal after you've made changes to the `scraping.py` file.
 
 ```
 $ pipenv run watch
@@ -69,7 +69,7 @@ $ pipenv run watch
 
 ### Import the `requests` library
 
-We're going to use the [`requests`](https://requests.readthedocs.io/en/master/) Python library to make requests to `https://www.pluralsight.com/` and download the HTML source code, much like your browser does. 
+We're going to use the [`requests`](https://requests.readthedocs.io/en/master/) Python library to make requests to the Pluralsight homepage (`https://www.pluralsight.com/`) and download the HTML source code.
 
 To start, `import requests` at the top of your `scraping.py` file.
 
@@ -103,7 +103,7 @@ If you inspect the HTML source code from the Pluralsight homepage, you'll see th
 
 `BeautifulSoup` has a really useful method called `select`, that allows us to get all elements that match a given CSS selector from the provided HTML.
 
-To get the list of trending topic elements, call the `soup.select` method and pass in the following CSS selector string as an argument: `"ul.glide__slides > li"`. Store the result in an array called `trending_topic_elements`.
+To get the list of trending topic elements, call the `soup.select` method and pass in the following CSS selector string as an argument: `"ul.glide__slides > li"`. Store the results in an array called `trending_topic_elements`.
 
 ### Getting the topic name
 
@@ -119,20 +119,17 @@ You can access the name of a trending topic as a string using the `text` attribu
 
 ### Getting the topic URL
 
-Now let's grab the trending topic's URL. Inside your `for` loop from the last step, call the `trending_topic.find` method and pass in the string `"a"` to get the `a` element that links to the trending topic's URL. Store it in a variable called `url_element`.
+Now let's grab the trending topic's URL. Inside your `for` loop from the last step, call the `trending_topic.find` method and pass in the string `"a"` to get the `a` element that links to the trending topic's URL. Store it in a variable called `topic_url_element`.
 
-You can access the trending topic's URL as a string by grabbing the `href` attribute from `url_element`. Store the attribute `url_element["href"]` in a variable called `url`. If you want to see whether you've grabbed the url properly, try printing it with `print(url)`.
+You can access the trending topic's URL as a string by grabbing the `href` attribute from `topic_url_element`. Store the attribute `topic_url_element["href"]` in a variable called `topic_url`. If you want to see whether you've grabbed the URL properly, try printing it with `print(topic_url)`.
 
 ### Formatting our data
 
 Now that we've got the `name` and `url` for each trending topic, we want to store the details of each trending topic in an array. We'll use a dictionary with the keys `name` and `url` to represent each trending topic.
 
-Inside your `for` loop from the previous two steps, create a dictionary called `topic` where the `name` key is set to the value of your `name` variable and the `url` key is set to the value of your `url` variable. Append the dictionary to the `trending_topics` array by calling `trending_topics.append(topic)`.
+Inside your `for` loop from the previous two steps, create a dictionary called `topic` where the `name` key is set to the value of your `name` variable and the `url` key is set to the value of your `topic_url` variable. Append the dictionary to the `trending_topics` array by calling `trending_topics.append(topic)`.
 
 If you print your `trending_topics` array, you should see all of the topics from the Pluralsight homepage and their corresponding URLs.
-
-## Next Steps
-
 ### Exporting our data
 
 Congrats! You've successfully scraped data from a website using Python. Now let's export it to a file so the data can be used later on.
@@ -146,3 +143,5 @@ with open('trending_topics.json', 'w') as json_file:
 ```
 
 Inside of your `with` block, call the `json.dump` method, passing in your `trending_topics` array as the first argument and `json_file` as the second argument. This will write your `trending_topics` array to the `trending_topics.json` in JSON format.
+
+## Next Steps
