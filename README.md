@@ -53,7 +53,7 @@ $ pipenv install
 
 ### Verify Setup
 
-You can test that everything has been set up correctly by running the following command, which will show you a list of failing tests. This is a good thing! You'll gradually fix these test cases as you progress through the project. By the end of this project, all of the tests will pass.
+You can test that everything has been set up correctly by running the following command, which will show you a list of failing tests. This is a good thing! You'll gradually fix these test cases as you progress through the project. By time you've completed this project, all of the tests will pass.
 
 ```
 $ pipenv run test
