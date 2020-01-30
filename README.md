@@ -59,7 +59,7 @@ You can test that everything has been set up correctly by running the following 
 $ pipenv run test
 ```
 
-As you're working through the project, it's highly recommended to run the following command, which will watch for any changes to your files and then re-run the tests automatically whenever you save your files. You can run this command once, and then look back at the terminal after you've made changes to the `scraping.py` file.
+As you're working through the project, it's highly recommended to run the following command, which will watch for any changes to your files and then re-run the tests automatically whenever you save them. You can run this command once, and then look back at the terminal after you've made changes to the `scraping.py` file.
 
 ```
 $ pipenv run watch
