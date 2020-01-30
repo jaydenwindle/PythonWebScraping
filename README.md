@@ -1,6 +1,6 @@
 # Intro to Web Scraping with Python
 
-### [Get Started](https://github.com/jaydenwindle/PythonWebScraping/blob/master/tasks.md)
+### [Get Started →](https://github.com/jaydenwindle/PythonWebScraping/blob/master/tasks.md)
 
 ## Description
 
@@ -65,4 +65,4 @@ As you're working through the project, it's highly recommended to run the follow
 $ pipenv run watch
 ```
 
-### [Get Started](https://github.com/jaydenwindle/PythonWebScraping/blob/master/tasks.md)
+### [Get Started →](https://github.com/jaydenwindle/PythonWebScraping/blob/master/tasks.md)
